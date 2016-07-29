@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+    i3-msg exec ~/scripts/i3blocks/blocklets/shutdown.sh -c
+    exit 1
+fi
+
+echo "${USER}"
+echo "${USER}"
+echo ""
