@@ -112,9 +112,9 @@ sub playerctl {
     my $title = qx(playerctl $player_arg metadata title);
     exit(0) if $? || $title eq '(null)';
     if (index($title, "(") != -1) {
-	$title = substr $title, 0, index($title, "(");
+	$title = substr $title, 0, index($title, "(") + 1;
     }
-
+    $title =~ s/\s+$//;
     push(@metadata, $title) if $title;
 
     my $display = join(" - ", @metadata) if @metadata;

@@ -20,6 +20,7 @@ SCONTROL="${3:-Master}"
 
 case $BLOCK_BUTTON in
   1) amixer -D $MIXER  -q sset $SCONTROL toggle ;; # left click, mute/unmute
+  3) i3-msg exec pavucontrol;; # right click, open pavucontrol
   4) amixer -D $MIXER -q sset $SCONTROL 3%+ ;;    # scroll up, increase
   5) amixer -D $MIXER  -q sset $SCONTROL 3%- ;;    # scroll down, decrease
 esac
