@@ -46,8 +46,8 @@ if [ "$(state)" != 'up' ]; then
   exit 0
 fi
 
-echo "$(ssid) ($(strength)%): $(ipv4)"
-echo "$(ssid) ($(strength)%): $(ipv4)"
+echo "$(ssid) ($(strength)%)"
+echo "$(ssid) ($(strength)%)"
 
 # short text
 if [ "$(strength)" -gt "50" ]; then
